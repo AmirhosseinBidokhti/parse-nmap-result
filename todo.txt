@@ -1,0 +1,36 @@
+
+Hosts could be found in any of these fields
+
+host
+[
+  { 
+    host -> hostnames -> hostname -> name ✅
+
+    ports [
+      {
+
+        port [
+          "script": [
+            table: [
+              {
+                "elem": [
+                  {
+                    "_": "
+                  }
+                ]
+              }
+            ]
+          ]
+        ]
+
+      }
+
+
+    ]
+
+
+
+
+  }
+]
+

@@ -5,6 +5,9 @@ import (
 	"fmt"
 	"parse_nmap_result/structs"
 	utils "parse_nmap_result/utilities"
+	"regexp"
+
+	tld "github.com/jpillora/go-tld"
 )
 
 // func getDomain(fullUrl string) string {
@@ -23,6 +26,33 @@ func parser(XMLdata []byte) []string {
 
 	var hosts []string
 
+	Host := nmapRes.Host
+
+	for _, v := range Host {
+
+		for _, v := range v.Ports.Port {
+
+			output := v.Script.Output
+
+			if len(output) > 0 {
+
+				re := regexp.MustCompile(`(?:[\w-]+\.)+[\w-]+`)
+
+				submatchall := re.FindAllString(output, -1)
+
+				hosts = append(hosts, submatchall...)
+
+				// for _, element := range submatchall {
+				// 	//fmt.Println(element)
+				// 	hosts = append(hosts, element)
+				// }
+
+			}
+
+		}
+
+	}
+
 	for _, host := range nmapRes.Host {
 
 		hosts = append(hosts, host.Hostnames.Hostname.Name)
@@ -30,18 +60,70 @@ func parser(XMLdata []byte) []string {
 	}
 
 	return utils.RemoveDuplicateStr(hosts)
-	// for _, v := range hosts {
-	// 	fmt.Println(v)
-	// }
 
 }
 
 func main() {
 	var XMLdata = utils.ReadXML("./sample.xml")
+
+	var hosts []string
+	var uniqueHosts []string
+
 	d := parser(XMLdata)
 	for _, v := range d {
+		//fmt.Println(v)
+		url := "https://" + v
+		//fmt.Println(url) // so far all unique values in the d
+		hosts = append(hosts, url)
+	}
+
+	// Domains
+	// for _, v := range hosts {
+	// 	parsedUrl, _ := tld.Parse(v)
+	// 	//fmt.Println()
+	// 	uniqueHosts = append(uniqueHosts, parsedUrl.Domain+"."+parsedUrl.TLD)
+	// }
+
+	// for _, v := range utils.RemoveDuplicateStr(uniqueHosts) {
+	// 	fmt.Println(v)
+	// }
+
+	// Subdomains
+	for _, v := range hosts {
+		parsedUrl, _ := tld.Parse(v)
+
+		// If there is a subdomain except the www concat it
+		if len(parsedUrl.Subdomain) > 0 && parsedUrl.Subdomain != "www" {
+			uniqueHosts = append(uniqueHosts, parsedUrl.Subdomain+"."+parsedUrl.Domain+"."+parsedUrl.TLD)
+		} else {
+			uniqueHosts = append(uniqueHosts, parsedUrl.Domain+"."+parsedUrl.TLD)
+		}
+
+	}
+
+	for _, v := range utils.RemoveDuplicateStr(uniqueHosts) {
 		fmt.Println(v)
 	}
+
+	// host = utils.RemoveDuplicateStr(host)
+	// // Domains
+	// for _, v := range host {
+
+	// 	parsedUrl, _ := tld.Parse(v)
+
+	// 	fmt.Println(parsedUrl.Domain + "." + parsedUrl.TLD)
+
+	// }
+
+	// Sub-domains
+	// for _, v := range utils.RemoveDuplicateStr(host) {
+
+	// 	parsedUrl, _ := tld.Parse(v)
+
+	// 	fmt.Println(parsedUrl.Subdomain + "." + parsedUrl.Domain + "." + parsedUrl.TLD)
+
+	// }
+
 }
 
 // func main() {
