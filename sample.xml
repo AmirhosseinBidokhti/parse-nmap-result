@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Jan 27 17:43:43 2022 as: nmap -sS -Pn -p 21,22,23,25,53,80,110,161,389,443,445,587,636,995,1025,1701,1723,2000,2483,2484,2601,3001,3128,3306,3389,3690,5060,5900,8000,8080,10443 -&#45;script ssl-cert -oX nmap.xml 206.223.178.160/28 -->
+<nmaprun scanner="nmap" args="nmap -sS -Pn -p 21,22,23,25,53,80,110,161,389,443,445,587,636,995,1025,1701,1723,2000,2483,2484,2601,3001,3128,3306,3389,3690,5060,5900,8000,8080,10443 -&#45;script ssl-cert -oX nmap.xml 206.223.178.160/28" start="1643305423" startstr="Thu Jan 27 17:43:43 2022" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="31" services="21-23,25,53,80,110,161,389,443,445,587,636,995,1025,1701,1723,2000,2483-2484,2601,3001,3128,3306,3389,3690,5060,5900,8000,8080,10443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1643305426" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.160" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-160.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<host starttime="1643305425" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.161" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-161.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<host starttime="1643305425" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.162" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-162.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<host starttime="1643305425" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.163" addrtype="ipv4"/>
+<hostnames>
+<hostname name="mail.sidefx.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="29">
+<extrareasons reason="no-responses" count="29"/>
+</extraports>
+<port protocol="tcp" portid="389"><state state="closed" reason="reset" reason_ttl="54"/><service name="ldap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="636"><state state="closed" reason="reset" reason_ttl="54"/><service name="ldapssl" method="table" conf="3"/></port>
+</ports>
+<times srtt="86982" rttvar="65922" to="350670"/>
+</host>
+<host starttime="1643305425" endtime="1643305432"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.164" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-164.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="28">
+<extrareasons reason="no-responses" count="28"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="389"><state state="closed" reason="reset" reason_ttl="54"/><service name="ldap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="636"><state state="closed" reason="reset" reason_ttl="54"/><service name="ldapssl" method="table" conf="3"/></port>
+</ports>
+<times srtt="90258" rttvar="52790" to="301418"/>
+</host>
+<host starttime="1643305425" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.165" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-165.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<host starttime="1643305425" endtime="1643305432"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.166" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-166.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="27">
+<extrareasons reason="no-responses" count="27"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="389"><state state="closed" reason="reset" reason_ttl="54"/><service name="ldap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="https" method="table" conf="3"/><script id="ssl-cert" output="Subject: commonName=www.orbolt.com&#xa;Subject Alternative Name: DNS:www.orbolt.com, DNS:orbolt.com&#xa;Issuer: commonName=Go Daddy Secure Certificate Authority - G2/organizationName=GoDaddy.com, Inc./stateOrProvinceName=Arizona/countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2020-06-18T16:10:49&#xa;Not valid after:  2022-06-18T15:38:16&#xa;MD5:   edb5 dcc2 e826 598f eb67 666d 6d6b 0ebd&#xa;SHA-1: dde7 d2ef 4bed 87eb 0ef9 6295 ec58 21c4 4908 e8bc"><table key="subject">
+<elem key="organizationalUnitName">Domain Control Validated</elem>
+<elem key="commonName">www.orbolt.com</elem>
+</table>
+<table key="issuer">
+<elem key="stateOrProvinceName">Arizona</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">GoDaddy.com, Inc.</elem>
+<elem key="localityName">Scottsdale</elem>
+<elem key="commonName">Go Daddy Secure Certificate Authority - G2</elem>
+<elem key="organizationalUnitName">http://certs.godaddy.com/repository/</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">userdata: 0x55bc4d2770c8</elem>
+<elem key="bits">2048</elem>
+<elem key="exponent">userdata: 0x55bc4d1c2968</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="critical">true</elem>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="critical">true</elem>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">&#xa;Full Name:&#xa;  URI:http://crl.godaddy.com/gdig2s1-2039.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.16.840.1.114413.1.7.23.1&#xa;  CPS: http://certificates.godaddy.com/repository/&#xa;Policy: 2.23.140.1.2.1&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://ocsp.godaddy.com/&#xa;CA Issuers - URI:http://certificates.godaddy.com/repository/gdig2.crt&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:40:C2:BD:27:8E:CC:34:83:30:A2:33:D7:FB:6C:B3:F0:B4:2C:80:CE&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:www.orbolt.com, DNS:orbolt.com</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">FC:43:83:AD:1F:D8:7E:2A:73:A2:4D:1D:01:D0:A2:3A:17:CB:9A:8F</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 29:79:BE:F0:9E:39:39:21:F0:56:73:9F:63:A5:77:E5:&#xa;                BE:57:7D:9C:60:0A:F8:F9:4D:5D:26:5C:25:5D:C7:84&#xa;    Timestamp : Jun 18 16:10:50.613 2020 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:D5:55:B1:A0:DD:18:0A:4B:BA:61:32:&#xa;                1A:0F:6C:46:45:FA:4F:A8:61:3F:6E:F8:B6:69:9A:E2:&#xa;                58:9D:3C:70:3E:02:21:00:A0:0F:7D:1A:62:8E:84:6E:&#xa;                5C:93:25:F4:3F:F0:1C:0B:8B:60:78:30:2D:26:8D:E0:&#xa;                E6:3C:9A:24:2F:21:E1:26&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 22:45:45:07:59:55:24:56:96:3F:A1:2F:F1:F7:6D:86:&#xa;                E0:23:26:63:AD:C0:4B:7F:5D:C6:83:5C:6E:E2:0F:02&#xa;    Timestamp : Jun 18 16:10:50.912 2020 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:10:C8:7C:05:77:91:AA:87:26:AD:06:08:&#xa;
+  99:07:D7:AD:63:2B:4A:88:D6:6E:EA:0B:12:DC:B4:D0:&#xa;                6E:87:5D:88:02:20:0E:0F:D1:BD:0E:44:C9:23:12:DA:&#xa;                87:DD:76:26:99:B9:7E:A3:97:6C:97:DC:69:BB:19:5D:&#xa;
+67:66:6C:12:9F:98&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : DF:A5:5E:AB:68:82:4F:1F:6C:AD:EE:B8:5F:4E:3E:5A:&#xa;                EA:CD:A2:12:A4:6A:5E:8E:3B:12:C0:20:44:5C:2A:73&#xa;    Timestamp : Jun 18 16:10:51.134 2020 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:07:18:63:36:FF:F0:AD:7B:5B:EF:3A:49:&#xa;
+ DA:19:46:B5:AA:EB:2F:5A:5B:18:90:59:B2:32:EC:0C:&#xa;                DB:EF:81:15:02:21:00:CC:E3:DD:3F:AE:BD:74:9C:58:&#xa;                CC:6A:3B:9E:6C:9C:FD:BB:4C:30:F8:D4:35:0A:E7:91:&#xa;                C6:35:E2:E6:8E:57:A5</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2020-06-18T16:10:49</elem>
+<elem key="notAfter">2022-06-18T15:38:16</elem>
+</table>
+<elem key="md5">edb5dcc2e826598feb67666d6d6b0ebd</elem>
+<elem key="sha1">dde7d2ef4bed87eb0ef96295ec5821c44908e8bc</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIGsTCCBZmgAwIBAgIJANpnHyz8OpqkMA0GCSqGSIb3DQEBCwUAMIG0MQswCQYD&#xa;VQQGEwJVUzEQMA4GA1UECBMHQXJpem9uYTETMBEGA1UEBxMKU2NvdHRzZGFsZTEa&#xa;MBgGA1UEChMRR29EYWRkeS5jb20sIEluYy4xLTArBgNVBAsTJGh0dHA6Ly9jZXJ0&#xa;cy5nb2RhZGR5LmNvbS9yZXBvc2l0b3J5LzEzMDEGA1UEAxMqR28gRGFkZHkgU2Vj&#xa;dXJlIENlcnRpZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTIwMDYxODE2MTA0OVoX&#xa;DTIyMDYxODE1MzgxNlowPDEhMB8GA1UECxMYRG9tYWluIENvbnRyb2wgVmFsaWRh&#xa;dGVkMRcwFQYDVQQDEw53d3cub3Jib2x0LmNvbTCCASIwDQYJKoZIhvcNAQEBBQAD&#xa;ggEPADCCAQoCggEBAKwqcqckF6ty6oAgMdbTOtjQGwHnv4KqNe/VbLXttnvfLrFz&#xa;wboEFCN2S2R9seCPAvFlXwaZ/69DSILho2uu8peUnp+X6JxUENObGUiOJzZg2w41&#xa;+d8ix0tfR41suCQQHhkmBXhR3N6qi/Nyt+WZ4sJWl4dkzPdqkxDTJwhuyXZbwDuF&#xa;hLX72LDuor7Hkq9PZ14lRfDFbQUydUACaivXCGSljNxRzjWeB6cgPsqUSS2Zz/Pu&#xa;ISR33bVHbtqeJ5DqIgABIlokPoqIEnon48mHxccX5MowX+3dZj9saDX8u0W8L8fz&#xa;KA3eaiqZ+TqgaMRAwuRQCQi8Wg+PxtNWBnqX4N0CAwEAAaOCAzswggM3MAwGA1Ud&#xa;EwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1UdDwEB&#xa;/wQEAwIFoDA4BgNVHR8EMTAvMC2gK6AphidodHRwOi8vY3JsLmdvZGFkZHkuY29t&#xa;L2dkaWcyczEtMjAzOS5jcmwwXQYDVR0gBFYwVDBIBgtghkgBhv1tAQcXATA5MDcG&#xa;CCsGAQUFBwIBFitodHRwOi8vY2VydGlmaWNhdGVzLmdvZGFkZHkuY29tL3JlcG9z&#xa;aXRvcnkvMAgGBmeBDAECATB2BggrBgEFBQcBAQRqMGgwJAYIKwYBBQUHMAGGGGh0&#xa;dHA6Ly9vY3NwLmdvZGFkZHkuY29tLzBABggrBgEFBQcwAoY0aHR0cDovL2NlcnRp&#xa;ZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBvc2l0b3J5L2dkaWcyLmNydDAfBgNVHSME&#xa;GDAWgBRAwr0njsw0gzCiM9f7bLPwtCyAzjAlBgNVHREEHjAcgg53d3cub3Jib2x0&#xa;LmNvbYIKb3Jib2x0LmNvbTAdBgNVHQ4EFgQU/EODrR/Yfipzok0dAdCiOhfLmo8w&#xa;ggF+BgorBgEEAdZ5AgQCBIIBbgSCAWoBaAB3ACl5vvCeOTkh8FZzn2Old+W+V32c&#xa;YAr4+U1dJlwlXceEAAABcsgyeXUAAAQDAEgwRgIhANVVsaDdGApLumEyGg9sRkX6&#xa;T6hhP274tmma4lidPHA+AiEAoA99GmKOhG5ckyX0P/AcC4tgeDAtJo3g5jyaJC8h&#xa;4SYAdQAiRUUHWVUkVpY/oS/x922G4CMmY63AS39dxoNcbuIPAgAAAXLIMnqgAAAE&#xa;AwBGMEQCIBDIfAV3kaqHJq0GCJkH161jK0qI1m7qCxLctNBuh12IAiAOD9G9DkTJ&#xa;IxLah912Jpm5fqOXbJfcabsZXWdmbBKfmAB2AN+lXqtogk8fbK3uuF9OPlrqzaIS&#xa;pGpejjsSwCBEXCpzAAABcsgye34AAAQDAEcwRQIgBxhjNv/wrXtb7zpJ2hlGtarr&#xa;L1pbGJBZsjLsDNvvgRUCIQDM490/rr10nFjMajuebJz9u0ww+NQ1CueRxjXi5o5X&#xa;pTANBgkqhkiG9w0BAQsFAAOCAQEAib0Gi86D5t5bD0KrH+LP8KSjSpO9gvPxpluW&#xa;V7RzR1a/yW5TyqbY4xM2qMwhUtoVIXwCxosepfqgjLM1R+Nid7HKB8Y1pp9CTYqT&#xa;JSt2mGX4iDuqfZuNXtpo9X2UwwZUqyzIj+pGRFOMs/YrxXWxTBvrxQ6vQ29XZ1/l&#xa;iaamBacAAE9WQ4DOmpzGg6E0FkBLl+4DpPDaJDKB1VnquLitYAfEP6s5IszWELwc&#xa;gjMZlAjCSEm8N2DnyT5o5p9Stylmc8IXi0YRCOdA0zO6O/I89iOWpopHk9NlZiMt&#xa;aPQJbACMbyRlAf8CNEPvmQgkJ3kHkzt4isUngkIT2uesMGbUtg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="636"><state state="closed" reason="reset" reason_ttl="54"/><service name="ldapssl" method="table" conf="3"/></port>
+</ports>
+<times srtt="90959" rttvar="31092" to="215327"/>
+</host>
+<host starttime="1643305425" endtime="1643305432"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.167" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-167.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="28">
+<extrareasons reason="no-responses" count="28"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="389"><state state="closed" reason="reset" reason_ttl="54"/><service name="ldap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="636"><state state="closed" reason="reset" reason_ttl="54"/><service name="ldapssl" method="table" conf="3"/></port>
+</ports>
+<times srtt="87467" rttvar="50181" to="288191"/>
+</host>
+<host starttime="1643305425" endtime="1643305432"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.168" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-168.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="27">
+<extrareasons reason="no-responses" count="27"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="389"><state state="closed" reason="reset" reason_ttl="54"/><service name="ldap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="https" method="table" conf="3"/><script id="ssl-cert" output="Subject: commonName=sidefx.com/organizationName=Side Effects Software Inc./stateOrProvinceName=Ontario/countryName=CA&#xa;Subject Alternative Name: DNS:sidefx.com, DNS:*.sidefx.com, DNS:www.sidefx.com&#xa;Issuer: commonName=Entrust Certification Authority - L1K/organizationName=Entrust, Inc./countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2020-02-19T13:38:59&#xa;Not valid after:  2022-02-10T14:08:59&#xa;MD5:   7cec a0ef 7919 5e3e 1fcb 3af6 30c1 7164&#xa;SHA-1: 86ae 6abe 1742 7b3a 29e4 7fff f2fb f198 0626 27b7"><table key="subject">
+<elem key="stateOrProvinceName">Ontario</elem>
+<elem key="countryName">CA</elem>
+<elem key="organizationName">Side Effects Software Inc.</elem>
+<elem key="commonName">sidefx.com</elem>
+<elem key="localityName">Toronto</elem>
+</table>
+<table key="issuer">
+<elem key="organizationalUnitName">(c) 2012 Entrust, Inc. - for authorized use only</elem>
+<elem key="countryName">US</elem>
+<elem key="commonName">Entrust Certification Authority - L1K</elem>
+<elem key="organizationName">Entrust, Inc.</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">userdata: 0x55bc4d88c748</elem>
+<elem key="bits">2048</elem>
+<elem key="exponent">userdata: 0x55bc4d2db668</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:sidefx.com, DNS:*.sidefx.com, DNS:www.sidefx.com</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 55:81:D4:C2:16:90:36:01:4A:EA:0B:9B:57:3C:53:F0:&#xa;                C0:E4:38:78:70:25:08:17:2F:A3:AA:1D:07:13:D3:0C&#xa;    Timestamp : Feb 19 14:09:00.996 2020 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:21:00:D9:24:4C:5B:3C:30:C5:8B:29:1A:7E:&#xa;                7E:7E:FA:ED:5C:BF:D9:84:38:E3:2F:23:C2:EF:63:31:&#xa;                FF:5A:2A:91:9E:02:20:59:16:B4:75:2F:27:D9:3C:CA:&#xa;                39:47:DF:7E:40:72:11:09:27:7D:C5:2F:3A:E1:2E:91:&#xa;                DE:C1:67:5B:55:28:B2&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 87:75:BF:E7:59:7C:F8:8C:43:99:5F:BD:F3:6E:FF:56:&#xa;                8D:47:56:36:FF:4A:B5:60:C1:B4:EA:FF:5E:A0:83:0F&#xa;    Timestamp : Feb 19 14:09:01.025 2020 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:21:EE:B3:2A:0B:A8:FE:7F:D4:A1:94:81:&#xa;                0A:B1:4E:EB:35:35:B8:1A:DD:F9:FC:93:89:5C:70:FB:&#xa;                6D:32:4D:7F:02:20:28:EB:7D:D5:01:1E:F5:E6:07:50:&#xa;                24:68:E6:C9:05:D4:18:AF:E3:49:25:07:18:90:12:83:&#xa;                D1:2A:5F:60:6E:6D&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : DF:A5:5E:AB:68:82:4F:1F:6C:AD:EE:B8:5F:4E:3E:5A:&#xa;                EA:CD:A2:12:A4:6A:5E:8E:3B:12:C0:20:44:5C:2A:73&#xa;    Timestamp : Feb 19 14:09:01.013 2020 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:12:66:86:1F:FF:9A:49:34:7F:8F:97:BD:&#xa;                EF:61:33:19:0A:41:72:6A:63:90:40:B9:14:0D:27:C4:&#xa;                52:37:F4:7A:02:21:00:AF:A6:5C:F4:17:F2:7C:0F:58:&#xa;                8A:04:E5:4F:B9:97:4B:46:5A:FC:3F:EF:3D:AA:1C:3D:&#xa;                E3:21:99:D1:D4:82:77&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : A4:B9:09:90:B4:18:58:14:87:BB:13:A2:CC:67:70:0A:&#xa;                3C:35:98:04:F9:1B:DF:B8:E3:77:CD:0E:C8:0D:DC:10&#xa;    Timestamp : Feb 19 14:09:00.943 2020 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:48:69:26:17:81:EB:46:F8:9E:CD:5D:FB:&#xa;
+74:61:8C:F0:7B:10:35:92:DA:11:36:2C:DE:43:36:37:&#xa;                0A:BA:CD:08:02:20:28:37:4B:B2:5C:56:C2:1E:DD:DA:&#xa;                53:06:8F:91:FE:F0:24:E7:36:7A:76:4A:1F:34:CF:A6:&#xa;                CC:5E:39:03:95:E6</elem>
+</table>
+<table>
+<elem key="critical">true</elem>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">&#xa;Full Name:&#xa;  URI:http://crl.entrust.net/level1k.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.16.840.1.114028.10.1.5&#xa;  CPS: http://www.entrust.net/rpa&#xa;Policy: 2.23.140.1.2.2&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://ocsp.entrust.net&#xa;CA Issuers - URI:http://aia.entrust.net/l1k-chain256.cer&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:82:A2:70:74:DD:BC:53:3F:CF:7B:D4:F7:CD:7F:A7:60:C6:0A:4C:BF&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">A6:04:DA:11:CE:3F:7B:76:7B:19:60:65:B9:E2:14:8B:75:D4:67:DF</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2020-02-19T13:38:59</elem>
+<elem key="notAfter">2022-02-10T14:08:59</elem>
+</table>
+<elem key="md5">7ceca0ef79195e3e1fcb3af630c17164</elem>
+<elem key="sha1">86ae6abe17427b3a29e47ffff2fbf198062627b7</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIHSjCCBjKgAwIBAgIRAOAPWei3APJtAAAAAFD/IJcwDQYJKoZIhvcNAQELBQAw&#xa;gboxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1FbnRydXN0LCBJbmMuMSgwJgYDVQQL&#xa;Ex9TZWUgd3d3LmVudHJ1c3QubmV0L2xlZ2FsLXRlcm1zMTkwNwYDVQQLEzAoYykg&#xa;MjAxMiBFbnRydXN0LCBJbmMuIC0gZm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxLjAs&#xa;BgNVBAMTJUVudHJ1c3QgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkgLSBMMUswHhcN&#xa;MjAwMjE5MTMzODU5WhcNMjIwMjEwMTQwODU5WjBrMQswCQYDVQQGEwJDQTEQMA4G&#xa;A1UECBMHT250YXJpbzEQMA4GA1UEBxMHVG9yb250bzEjMCEGA1UEChMaU2lkZSBF&#xa;ZmZlY3RzIFNvZnR3YXJlIEluYy4xEzARBgNVBAMTCnNpZGVmeC5jb20wggEiMA0G&#xa;CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDhWIKRWW1o2OWuTEXzbzQLSjszhA5l&#xa;j2NqAaQIs0q3OEaYg3ERop412Hdw3ZYZJ64Y1la5WK1kHW5LJRaeNopOCSDoNbiQ&#xa;bE8tYSqAqBUYvDuKxUI/ruTrBR3myXtS33Pbq+F1dcyHQ0zvgtYu2DXLx9tpeDtH&#xa;D/MB/Cqgv0mvmaIcPxuBAEjsdhtrqV78grnmEeOliJkIUJfwzHrQ7wjGum+AHAMw&#xa;9KyQNDB37vz99FHrXi9v7lJVUdas+4TOUVHYF+q5xa8mZu3gfZG5X8ymqHCiEtol&#xa;1arQlkJ6QKX3nkAeEMa1Z8jhWu4XJnpHRu7mRkie2ycwh0QVG2eUG92DAgMBAAGj&#xa;ggOXMIIDkzAzBgNVHREELDAqggpzaWRlZnguY29tggwqLnNpZGVmeC5jb22CDnd3&#xa;dy5zaWRlZnguY29tMIIB9AYKKwYBBAHWeQIEAgSCAeQEggHgAd4AdgBVgdTCFpA2&#xa;AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPTDAAAAXBdx9BEAAAEAwBHMEUCIQDZJExb&#xa;PDDFiykafn5++u1cv9mEOOMvI8LvYzH/WiqRngIgWRa0dS8n2TzKOUfffkByEQkn&#xa;fcUvOuEukd7BZ1tVKLIAdQCHdb/nWXz4jEOZX73zbv9WjUdWNv9KtWDBtOr/XqCD&#xa;DwAAAXBdx9BhAAAEAwBGMEQCICHusyoLqP5/1KGUgQqxTus1Nbga3fn8k4lccPtt&#xa;Mk1/AiAo633VAR715gdQJGjmyQXUGK/jSSUHGJASg9EqX2BubQB2AN+lXqtogk8f&#xa;bK3uuF9OPlrqzaISpGpejjsSwCBEXCpzAAABcF3H0FUAAAQDAEcwRQIgEmaGH/+a&#xa;STR/j5e972EzGQpBcmpjkEC5FA0nxFI39HoCIQCvplz0F/J8D1iKBOVPuZdLRlr8&#xa;P+89qhw94yGZ0dSCdwB1AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQ&#xa;AAABcF3H0A8AAAQDAEYwRAIgSGkmF4HrRviezV37dGGM8HsQNZLaETYs3kM2Nwq6&#xa;zQgCICg3S7JcVsIe3dpTBo+R/vAk5zZ6dkofNM+mzF45A5XmMA4GA1UdDwEB/wQE&#xa;AwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwMwYDVR0fBCwwKjAo&#xa;oCagJIYiaHR0cDovL2NybC5lbnRydXN0Lm5ldC9sZXZlbDFrLmNybDBLBgNVHSAE&#xa;RDBCMDYGCmCGSAGG+mwKAQUwKDAmBggrBgEFBQcCARYaaHR0cDovL3d3dy5lbnRy&#xa;dXN0Lm5ldC9ycGEwCAYGZ4EMAQICMGgGCCsGAQUFBwEBBFwwWjAjBggrBgEFBQcw&#xa;AYYXaHR0cDovL29jc3AuZW50cnVzdC5uZXQwMwYIKwYBBQUHMAKGJ2h0dHA6Ly9h&#xa;aWEuZW50cnVzdC5uZXQvbDFrLWNoYWluMjU2LmNlcjAfBgNVHSMEGDAWgBSConB0&#xa;3bxTP8971PfNf6dgxgpMvzAdBgNVHQ4EFgQUpgTaEc4/e3Z7GWBlueIUi3XUZ98w&#xa;CQYDVR0TBAIwADANBgkqhkiG9w0BAQsFAAOCAQEAK3nm33suY3428aRmeIux83W+&#xa;TPUhNRcdpYO42+1zHjeZXReiKjjmyCVVyjRLztxoDqnHgdIyc3fprhwniLaZRp2y&#xa;UckCtN7X+LoffM3VFCJYy/EjWNOSweh9udU78vItab73pkIe/03HA18XzTognaaF&#xa;yjldrUUm7BfVHXRVYlrlggeRV7ngsV2hgKmsKST9jXVm0dQWzFo2u3TY+UVLQTCM&#xa;jNNSWNUzivK61ta1w/gEUaSQiK4NILna/tB7xyu4uYhAehOAQyHWu9asgojf3A9x&#xa;Qo2nrellf3uvxlCjBGYH5nkfnGMFezD36C3Ja1waOqmA5p+WBCMANaaw3OWH9w==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="636"><state state="closed" reason="reset" reason_ttl="54"/><service name="ldapssl" method="table" conf="3"/></port>
+</ports>
+<times srtt="89516" rttvar="29602" to="207924"/>
+</host>
+<host starttime="1643305425" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.169" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-169.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<host starttime="1643305425" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.170" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-170.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<host starttime="1643305426" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.171" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-171.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<host starttime="1643305426" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.172" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-172.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<host starttime="1643305426" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.173" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-173.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<host starttime="1643305426" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.174" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-174.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<host starttime="1643305426" endtime="1643305431"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="206.223.178.175" addrtype="ipv4"/>
+<hostnames>
+<hostname name="206-223-178-175.beanfield.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="31">
+<extrareasons reason="no-responses" count="31"/>
+</extraports>
+</ports>
+</host>
+<runstats><finished time="1643305432" timestr="Thu Jan 27 17:43:52 2022" elapsed="9.57" summary="Nmap done at Thu Jan 27 17:43:52 2022; 16 IP addresses (16 hosts up) scanned in 9.57 seconds" exit="success"/><hosts up="16" down="0" total="16"/>
+</runstats>
+</nmaprun>
