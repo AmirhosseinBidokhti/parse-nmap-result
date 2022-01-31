@@ -64,7 +64,7 @@ func parser(XMLdata []byte) []string {
 }
 
 func main() {
-	var XMLdata = utils.ReadXML("./sample.xml")
+	var XMLdata = utils.ReadXML("./walmart.sample.xml")
 
 	var hosts []string
 	var uniqueHosts []string
@@ -92,7 +92,7 @@ func main() {
 	for _, v := range hosts {
 		parsedUrl, _ := tld.Parse(v)
 
-		// If there is a subdomain except the www concat it
+		// If there is a subdomain except the "www" concat it
 		if len(parsedUrl.Subdomain) > 0 && parsedUrl.Subdomain != "www" {
 			uniqueHosts = append(uniqueHosts, parsedUrl.Subdomain+"."+parsedUrl.Domain+"."+parsedUrl.TLD)
 		} else {
