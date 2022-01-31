@@ -15,12 +15,15 @@ func main() {
 
 	var domains bool
 	var subdomains bool
+	var stdinRead bool
 
 	flag.BoolVar(&domains, "d", false, "print domains")
 	flag.BoolVar(&subdomains, "s", false, "print subdomains")
+	flag.BoolVar(&stdinRead, "std", false, "read file from stdin")
+	filePath := flag.String("fp", "test.txt", "file path to read from")
 	flag.Parse()
 
-	var XMLdata = utils.ReadXML("./walmart.sample.xml")
+	var XMLdata = utils.ReadXML(*filePath)
 
 	var hosts []string
 	var uniqueHosts []string
@@ -32,6 +35,10 @@ func main() {
 		url := "https://" + v
 		hosts = append(hosts, url)
 	}
+
+	// TODO: Ability to read file from stdin so we can use pipes
+	// if stdinRead {
+	// }
 
 	if domains {
 		for _, v := range hosts {
