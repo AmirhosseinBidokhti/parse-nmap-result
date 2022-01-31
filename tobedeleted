@@ -1,0 +1,50 @@
+	// host = utils.RemoveDuplicateStr(host)
+	// // Domains
+	// for _, v := range host {
+
+	// 	parsedUrl, _ := tld.Parse(v)
+
+	// 	fmt.Println(parsedUrl.Domain + "." + parsedUrl.TLD)
+
+	// }
+
+	// Sub-domains
+	// for _, v := range utils.RemoveDuplicateStr(host) {
+
+	// 	parsedUrl, _ := tld.Parse(v)
+
+	// 	fmt.Println(parsedUrl.Subdomain + "." + parsedUrl.Domain + "." + parsedUrl.TLD)
+
+	// }
+
+  --------------------------------------
+
+  // func main() {
+// 	urls := []string{
+// 		"google.com",
+// 		"http://blog.google",
+// 		"medi-cal.ca.gov/",
+// 		"ato.gov.au",
+// 		"a.very.complex-domain.co.uk:8080/foo/bar",
+// 		"a.domain.that.is.unmanaged",
+// 	}
+// 	for _, url := range urls {
+// 		u, _ := tld.Parse(url)
+// 		fmt.Printf("%50s = [ %s ] [ %s ] [ %s ] [ %s ] [ %s ] [ %t ]\n",
+// 			u, u.Subdomain, u.Domain, u.TLD, u.Port, u.Path, u.ICANN)
+// 	}
+// }
+
+
+// url := "https://" + host.Hostnames.Hostname.Name
+
+// parsedUrl, _ := tld.Parse(url)
+// parsedUrl, _ := tld.Parse(url)
+
+// hosts = append(hosts, parsedUrl.Domain+"."+parsedUrl.TLD)
+// 	hosts = append(hosts, parsedUrl.Domain+"."+parsedUrl.TLD)
+
+	// for _, element := range submatchall {
+				// 	//fmt.Println(element)
+				// 	hosts = append(hosts, element)
+				// }
